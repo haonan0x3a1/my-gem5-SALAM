@@ -1,4 +1,6 @@
-# gem5-SALAM #
+# 克隆该项目用于学习
+
+# gem5-SALAM
 
 gem5-SALAM (System Architecture for LLVM-based Accelerator Modeling), is a novel system architecture designed to enable LLVM-based modeling and simulation of custom hardware accelerators.
 
@@ -21,9 +23,11 @@ sudo apt install build-essential git m4 scons zlib1g zlib1g-dev \
 ## LLVM/Clang Setup
 
 For a quick start, one can simply run the following to install LLVM and Clang on Ubuntu 20.04.
+
 ```bash
 sudo apt install llvm-12 llvm-12-tools clang-12
 ```
+
 After installing these specific libraries, simply run the [update alternatives](https://github.com/TeCSAR-UNCC/gem5-SALAM/blob/main/docs/update-alternatives.sh) script in docs/.
 
 Alternatively, you can install the latest version of LLVM via your system package manager or build from source found at https://github.com/llvm/llvm-project.
@@ -51,7 +55,9 @@ scons build/ARM/gem5.debug -j`nproc`
 For more information regarding the binary types, and other build information refer to the gem5 build documentation [here](http://learning.gem5.org/book/part1/building.html).
 
 # Building with docker
+
 You can use the Dockerfile given in the `docker/` directory to build the project and run the benchmarks. To build the project use the following command:
+
 ```bash
 docker build . --file docker/Dockerfile --build-arg BUILD_TYPE="opt"
 ```
@@ -118,7 +124,7 @@ We have written a guide on how to create the GEMM system validation example. Thi
 
 The [SALAM Object Overview](https://github.com/TeCSAR-UNCC/gem5-SALAM/blob/master/docs/SALAM_Object_Overview.md) covers what various Sim Objects in gem5-SALAM are and their purpose.
 
-## Full-system OS Simulation ##
+## Full-system OS Simulation
 
 Please download the latest version of the Linux Kernel for ARM from the [gem5 ARM kernel page](http://gem5.org/ARM_Kernel).
 You will also need the [ARM disk images](http://www.gem5.org/dist/current/arm/) for full system simulation.
